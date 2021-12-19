@@ -1,8 +1,9 @@
 package sii.maroc;
 
-import org.junit.Assert;
-import org.junit.Test;
 import static org.fest.assertions.api.Assertions.assertThat;
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
 
 /*recipe of Tomato Mozzarella Salad is
      *
@@ -32,7 +33,11 @@ public class RestaurantTest {
 // Allowed modification zone starts here
     @Test
     public void shouldFailWhenOutOfStock(){
-        Assert.fail();
+    	
+    	Restaurant restaurant = new Restaurant("1 balls Mozzarella", "1 tomatoes", "olive oil", "pepper");
+        Ticket ticket = restaurant.order("1 Tomato Mozzarella Salad"); 
+        
+        assertNotNull(ticket);
     }
 // Allowed modification zone ends here
 
@@ -53,7 +58,7 @@ public class RestaurantTest {
         assertThat(meal.cookingDuration()).isEqualTo(15);
     }
 
-
+    
     /**
      * recipe for a Pizza is
      *
