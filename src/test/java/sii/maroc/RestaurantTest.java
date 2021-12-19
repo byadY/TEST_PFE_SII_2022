@@ -1,5 +1,6 @@
 package sii.maroc;
 
+
 import org.junit.Assert;
 import org.junit.Test;
 import static org.fest.assertions.api.Assertions.assertThat;
@@ -32,7 +33,13 @@ public class RestaurantTest {
 // Allowed modification zone starts here
     @Test
     public void shouldFailWhenOutOfStock(){
-        Assert.fail();
+//    	try {
+//    		Restaurant r = new Restaurant();
+//    		assertThat(r).isNotNull();
+//    	}catch(UnavailableDishException e) {
+//    		e.getError();
+//    	}        
+    	Assert.fail();
     }
 // Allowed modification zone ends here
 
